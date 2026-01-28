@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import CopyButton from '@/app/Components/CopyButton';
 import config from '@/lib/config';
-
+  
 
 export default async function PastePage({
   params,
@@ -11,7 +11,7 @@ export default async function PastePage({
   const { id } = await params;
 
   const res = await fetch(
-    `${config.BASE_URL}/${id}`,
+    `${config.BASE_URL}/api/pastes/${id}`,
     { cache: 'no-store' }
   );
 
